@@ -1,6 +1,6 @@
 {
   "name": "zod-refine",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "An adapter that allows using Zod schemas as Recoil Sync validators instead of Refine.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,11 +8,17 @@
     "build": "tsup src/index.ts --dts",
     "lint": "eslint src/ --ext .ts",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brncsk/zod-refine.git"
+    "url": "https://github.com/brncsk/zod-refine.git"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   },
   "keywords": [
     "zod",
@@ -29,6 +35,7 @@
   "homepage": "https://github.com/brncsk/zod-refine#readme",
   "devDependencies": {
     "@types/eslint": "^8.4.2",
+    "@types/semantic-release": "^17.2.3",
     "@types/typescript": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
@@ -36,6 +43,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.0",
     "prettier": "^2.6.2",
+    "semantic-release": "^19.0.2",
     "tsup": "^6.0.1",
     "typescript": "^4.7.2"
   },
