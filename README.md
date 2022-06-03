@@ -1,4 +1,4 @@
-# `zod-refine`
+# `zod-refine` ![Github CI](https://github.com/brncsk/zod-refine/actions/workflows/release.yml/badge.svg) [![NPM version](https://badge.fury.io/js/zod-refine.svg)](https://badge.fury.io/js/zod-refine)
 
 `zod-refine` is an adapter library that lets you use
 [Zod](https://github.com/colinhacks/zod) schemas for validating atom values in
@@ -38,13 +38,13 @@ The following is an introductory example on checking a Recoil
 **Using Refine:**
 
 ```ts
-import { atom } from 'recoil';
-import { syncEffect, refine } from 'recoil-sync';
+import { atom } from "recoil";
+import { syncEffect, refine } from "recoil-sync";
 
 const testAtom = atom<number>({
-  key: 'test',
+  key: "test",
   default: 0,
-  key: 'test',
+  key: "test",
   effects: [
     syncEffect({
       refine: refine.number(),
@@ -56,14 +56,14 @@ const testAtom = atom<number>({
 **Using `zod-refine`:**
 
 ```ts
-import { atom } from 'recoil';
-import { syncEffect } from 'recoil-sync';
+import { atom } from "recoil";
+import { syncEffect } from "recoil-sync";
 
-import { z } from 'zod';
-import { getRefineCheckerForZodSchema } from 'zod-refine';
+import { z } from "zod";
+import { getRefineCheckerForZodSchema } from "zod-refine";
 
 const testAtom = atom<number>({
-  key: 'test',
+  key: "test",
   default: 0,
   effects: [
     syncEffect({
@@ -83,14 +83,14 @@ using Refine's `match()` and `asType()` checkers:
 
 ```ts
 const myAtom = atom<number>({
-  key: 'MyAtom',
+  key: "MyAtom",
   default: 0,
   effects: [
     syncEffect({
       refine: match(
         number(),
-        asType(string(), x => parseInt(x)),
-        asType(object({ value: number() }), x => x.value)
+        asType(string(), (x) => parseInt(x)),
+        asType(object({ value: number() }), (x) => x.value)
       ),
     }),
   ],
@@ -101,15 +101,15 @@ This idiom can be adapted to Zod using `z.union()` / `transform()`:
 
 ```ts
 const myAtom = atom<number>({
-  key: 'MyAtom',
+  key: "MyAtom",
   default: 0,
   effects: [
     syncEffect({
       refine: getRefineCheckerForZodSchema(
         z.union([
           z.number(),
-          z.string().transform(x => parseInt(x)),
-          z.object({ value: z.number() }).transform(x => x.value),
+          z.string().transform((x) => parseInt(x)),
+          z.object({ value: z.number() }).transform((x) => x.value),
         ])
       ),
     }),
