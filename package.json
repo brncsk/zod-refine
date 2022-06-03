@@ -25,5 +25,9 @@
   "homepage": "https://github.com/brncsk/zod-refine#readme",
   "devDependencies": {
     "prettier": "^2.6.2"
+  },
+  "peerDependencies": {
+    "recoil-sync": "^0.0.1-alpha.2",
+    "zod": "^3.17.3"
   }
 }
