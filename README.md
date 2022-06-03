@@ -1,4 +1,4 @@
-# `zod-refine` ![Github CI](https://github.com/brncsk/zod-refine/actions/workflows/release.yml/badge.svg) [![NPM version](https://badge.fury.io/js/zod-refine.svg)](https://badge.fury.io/js/zod-refine)
+# `zod-refine` ![Github CI](https://github.com/brncsk/zod-refine/actions/workflows/release.yml/badge.svg) [![NPM version](https://badge.fury.io/js/zod-refine.svg)](https://www.npmjs.com/package/zod-refine)
 
 `zod-refine` is an adapter library that lets you use
 [Zod](https://github.com/colinhacks/zod) schemas for validating atom values in
