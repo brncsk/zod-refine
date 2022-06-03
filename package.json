@@ -1,0 +1,26 @@
+{
+  "name": "zod-refine",
+  "version": "0.1.0",
+  "description": "An adapter that allows using Zod schemas as Recoil Sync validators instead of Refine.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brncsk/zod-refine.git"
+  },
+  "keywords": [
+    "zod",
+    "refine",
+    "recoil-sync",
+    "adapter",
+    "validator"
+  ],
+  "author": "Barancsuk Ádám",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brncsk/zod-refine/issues"
+  },
+  "homepage": "https://github.com/brncsk/zod-refine#readme"
+}
