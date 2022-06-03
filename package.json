@@ -20,6 +20,9 @@
       "main"
     ]
   },
+  "files": [
+    "dist/"
+  ],
   "keywords": [
     "zod",
     "refine",
