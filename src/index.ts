@@ -1,5 +1,5 @@
 import { ZodError } from 'zod';
-import type { infer as Infer, Schema } from 'zod';
+import type { z, Schema } from 'zod';
 import type { CheckResult, Checker } from 'refine';
 
 import { Path } from './recoil-path';
@@ -12,11 +12,11 @@ import { recoilPathToZodPath, zodPathToRecoilPath } from './util';
  */
 export function getRefineCheckerForZodSchema<S extends Schema>(
   schema: S
-): Checker<Infer<S>> {
+): Checker<z.infer<S>> {
   return function ZodRefineChecker(
     value: unknown,
     path
-  ): CheckResult<Infer<S>> {
+  ): CheckResult<z.infer<S>> {
     try {
       return {
         type: 'success',
