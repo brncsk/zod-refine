@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/brncsk/zod-refine/issues"
   },
-  "homepage": "https://github.com/brncsk/zod-refine#readme"
+  "homepage": "https://github.com/brncsk/zod-refine#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
 }
