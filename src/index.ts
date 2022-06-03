@@ -25,7 +25,7 @@ export function getRefineCheckerForZodSchema<S extends Schema>(
       };
     } catch (e) {
       if (e instanceof ZodError) {
-        // Recoil can only handle a single error
+        // Refine can only handle a single error
         const [error] = e.errors;
         return {
           type: 'failure',
