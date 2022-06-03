@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --dts",
+    "lint": "eslint src/ --ext .ts",
     "test": "jest"
   },
   "repository": {
@@ -26,7 +27,11 @@
   },
   "homepage": "https://github.com/brncsk/zod-refine#readme",
   "devDependencies": {
+    "@types/eslint": "^8.4.2",
     "@types/typescript": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
     "prettier": "^2.6.2",
     "tsup": "^6.0.1",
     "typescript": "^4.7.2"
