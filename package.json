@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsup src/index.ts --dts",
     "lint": "eslint src/ --ext .ts",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,8 @@
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "eslint": "^8.16.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.0",
     "prettier": "^2.6.2",
     "tsup": "^6.0.1",
     "typescript": "^4.7.2"
@@ -39,5 +42,11 @@
   "peerDependencies": {
     "recoil-sync": "^0.0.1-alpha.2",
     "zod": "^3.17.3"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
   }
 }
