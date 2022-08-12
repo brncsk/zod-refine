@@ -4,7 +4,12 @@
  * https://github.com/facebookexperimental/Recoil/blob/8852c1a422ccb1dcca9653b55f0e8b454a4216ea/packages/refine/Refine_Checkers.js
  */
 export class Path {
-  constructor(public parent?: Path, public field: string = '<root>') {}
+  constructor(public parent?: Path, public field: string = '<root>') {
+    if (!this.parent) {
+      // @ts-expect-error Set null to match original behavior
+      this.parent = null;
+    }
+  }
 
   // Method to extend path by a field while traversing a container
   extend(field: string): Path {
