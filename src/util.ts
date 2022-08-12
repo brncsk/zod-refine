@@ -1,4 +1,4 @@
-import { Path } from '@recoiljs/refine';
+import { Path } from './recoil-path';
 
 export function zodPathToRecoilPath(elements: (string | number)[]): Path {
   return elements.reduce(

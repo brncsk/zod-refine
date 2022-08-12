@@ -1,9 +1,9 @@
 import { ZodError } from 'zod';
-import { Path } from '@recoiljs/refine';
 
 import type { z, Schema } from 'zod';
 import type { CheckResult, Checker } from '@recoiljs/refine';
 
+import { Path } from './recoil-path';
 import { recoilPathToZodPath, zodPathToRecoilPath } from './util';
 
 /**
