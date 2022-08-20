@@ -1,4 +1,4 @@
-import { Path } from '../src/recoil-path';
+import { Path } from '@recoiljs/refine';
 import { recoilPathToZodPath, zodPathToRecoilPath } from '../src/util';
 
 test('zodPathToRecoilPath', () => {
